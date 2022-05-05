@@ -1,5 +1,6 @@
-import('./bootstrap');
 import { ChromeAPI } from '@redhat-cloud-services/types';
+
+import('./bootstrap');
 
 declare global {
   const insights: {

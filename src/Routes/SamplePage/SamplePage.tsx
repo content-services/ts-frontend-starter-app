@@ -1,18 +1,12 @@
-import {
-    Button,
-    Spinner,
-    Stack,
-    StackItem,
-    Title
-} from '@patternfly/react-core';
+import './sample-page.scss';
+
+import { Button, Spinner, Stack, StackItem, Title } from '@patternfly/react-core';
 import { Main } from '@redhat-cloud-services/frontend-components/Main';
-import {
-    PageHeader as _PageHeader,
-    PageHeaderTitle
-} from '@redhat-cloud-services/frontend-components/PageHeader';
+import { PageHeader as _PageHeader, PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
 import { PageHeaderProps as _PageHeaderProps } from '@redhat-cloud-services/frontend-components/PageHeader/PageHeader';
 import { addNotification } from '@redhat-cloud-services/frontend-components-notifications/redux';
 import React, { lazy, Suspense, useEffect } from 'react';
+import { ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -26,10 +20,6 @@ const PageHeader = _PageHeader as React.FunctionComponent<PageHeaderProps>;
 const SampleComponent = lazy(
     () => import('../../Components/SampleComponent/sample-component')
 );
-
-import './sample-page.scss';
-
-import { ReactElement } from 'react';
 
 /**
  * A smart component that handles all the api calls and data needed by the dumb components.
